@@ -1,1 +1,1 @@
-export * from "./components/AutovalidateInput"
+export { AutoValidateInput } from "./components/AutovalidateInput/AutovalidateInput"

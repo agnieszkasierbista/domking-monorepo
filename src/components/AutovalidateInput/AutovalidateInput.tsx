@@ -17,7 +17,7 @@ export const AutoValidateInput: React.FC<AutoValidateInputProps> = props => {
                 $isValid={fieldState?.isValid}
                 type="text"
                 value={fieldState?.value || ""}
-                onChange={(evt) => {
+                onChange={(evt: React.ChangeEvent<HTMLInputElement>) => {
                     props.observe?.(evt.target.value);
                     // console.log("state on change", fieldState);
                     setFieldState((prev) => {
@@ -27,7 +27,7 @@ export const AutoValidateInput: React.FC<AutoValidateInputProps> = props => {
                         };
                     });
                 }}
-                onBlur={(event) => {
+                onBlur={(event: React.FocusEvent<HTMLInputElement>) => {
                     const evtValue = event.target.value;
                     const validationResult = props.validate.find((validatingFunction) => validatingFunction(evtValue).isValid === false)?.(evtValue);
                     const postValidationState = (validationResult || {isValid: true, errors: []});

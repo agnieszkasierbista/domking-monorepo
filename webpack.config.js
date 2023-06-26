@@ -6,6 +6,7 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        library: {name: "abc", type: "umd"},
     },
     module: {
         rules: [
@@ -22,6 +23,21 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx', '.jsx']
+        extensions: ['.js', '.ts', '.tsx', '.jsx'],
+
     },
+    externals: {
+        react: {
+            commonjs: "react",
+            commonjs2: "react",
+            amd: "React",
+            root: "React"
+        },
+        "react-dom": {
+            commonjs: "react-dom",
+            commonjs2: "react-dom",
+            amd: "ReactDOM",
+            root: "ReactDOM"
+        }
+    }
 };
