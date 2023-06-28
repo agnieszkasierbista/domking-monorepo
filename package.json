@@ -22,7 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-webpack": "npx webpack && cp package.json package-lock.json README.md ./dist/"
-
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "styled-components": "^6.0.0-rc.6",
+    "ts-loader": "^9.4.3",
+    "webpack": "^5.88.0"
   }
 }
