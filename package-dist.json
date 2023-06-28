@@ -2,8 +2,9 @@
   "name": "domking",
   "version": "0.1.15",
   "description": "A simple React component library",
-  "main": "./index.js",
-  "types": "./index.d.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
