@@ -1,0 +1,9 @@
+{
+  "short_name": "Domking",
+  "name": "A React component library - Domking",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
