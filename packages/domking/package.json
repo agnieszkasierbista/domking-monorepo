@@ -1,6 +1,6 @@
 {
   "name": "domking",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "A simple React component library",
   "main": "./index.js",
   "types": "./index.d.js",
