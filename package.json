@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook":  "npm run storybook -w=domking-storybook",
+    "app": "npm run start -w=domking-storybook"
   },
   "author": "",
   "license": "ISC",
   "workspaces": [
     "packages/domking",
     "packages/domking-storybook"
-  ]
+  ],
+  "overrides": {
+    "react-refresh": "0.11.0"
+  }
 }
