@@ -7,3 +7,5 @@
 Requires validate prop with an array of validating functions
 
 ### - `Accordeon`
+
+### - `CustomDropdown`
