@@ -7,11 +7,12 @@ import {
     StyledDropdownListElement,
     StyledTextInputForDropdown
 } from "./CustomDropdown.styled";
+import {CustomDropdownProps} from "./CustomDropdown.types";
 
-export const CustomDropdown: React.FC<{ values: string[], dispatchSetDropdownContent: () => void }> = props => {
+export const CustomDropdown: React.FC<CustomDropdownProps> = props => {
 
     const [dropdownState, setDropdownState] = useState({
-        isVisible: false,
+        $isVisible: false,
         dropdownContents: ["aaa", "aaab", "aaabbb", "bbbccc", "bbbddd", "cccddd", "ccctttt", "bbb", "bbbbeee"],
         value: ""
     });
@@ -22,7 +23,7 @@ export const CustomDropdown: React.FC<{ values: string[], dispatchSetDropdownCon
 
     return (
         <StyledCustomDropdown
-            onBlur={() => setDropdownState({...dropdownState, isVisible: false})}
+            onBlur={() => setDropdownState({...dropdownState, $isVisible: false})}
             tabIndex={0}
         >
             <StyledTextInputForDropdown
@@ -32,19 +33,19 @@ export const CustomDropdown: React.FC<{ values: string[], dispatchSetDropdownCon
                 value={inputState.value}
                 onChange={(event) => {
                     if (event.target.value.length <= 1) {
-                        setDropdownState({...dropdownState, isVisible: false});
+                        setDropdownState({...dropdownState, $isVisible: false});
                         setInputState({value: event.target.value});
                     } else {
                         setInputState({...dropdownState, value: event.target.value});
 
-                        setTimeout(() => setDropdownState({...dropdownState, isVisible: true}), 1000);
+                        setTimeout(() => setDropdownState({...dropdownState, $isVisible: true}), 1000);
 
                         props.dispatchSetDropdownContent();
                     }
                 }}
             />
             <StyledDropdownContent
-                isVisible={dropdownState.isVisible}
+                $isVisible={dropdownState.$isVisible}
             >
                 <StyledDropdownContainer>
                     {props.values

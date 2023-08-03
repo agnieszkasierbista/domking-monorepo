@@ -11,10 +11,10 @@ const meta: Meta<typeof CustomDropdown> = {
     argTypes: {
         values: {
             description: "Values for the dropdown",
-            control: "object"
+            control: "array"
         },
         dispatchSetDropdownContent: {
-            description: "A function that returns void",
+            description: "A function that dispatches an action",
         }
     }
 };
@@ -25,7 +25,7 @@ type Story = StoryObj<typeof CustomDropdown>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Basic: Story = {
     args: {
-        values: ["aaa", "bbb", "ccc", "qwerrty", "odnfuf", "124"],
+        values: ["aaa", "bbb", "ccc", "qwerty", "poiuy", "124"],
         dispatchSetDropdownContent: () => console.log("yup!")
     },
 };

@@ -5,9 +5,9 @@ export const StyledTextInputForDropdown = styled.input`
   outline: 2px solid green;
 `;
 
-export const StyledDropdownContent = styled.div<{ isVisible: boolean }>`
+export const StyledDropdownContent = styled.div<{ $isVisible: boolean }>`
   position: absolute;
-  visibility: ${(props) => props.isVisible === false ? "hidden" : "visible"};
+  visibility: ${(props) => props.$isVisible === false ? "hidden" : "visible"};
   border: 1px solid black;
   background-color: aquamarine;
   width: 100%;
